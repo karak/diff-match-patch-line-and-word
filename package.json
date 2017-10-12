@@ -1,0 +1,43 @@
+{
+  "name": "diff-match-patch-line-and-word",
+  "version": "0.1.0",
+  "description": "An extension module that adds line-mode and word-mode on diff-match-patch.",
+  "main": "dist/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha --compilers ts:espower-typescript/guess test/*-test.ts",
+    "lint": "tslint src/*.ts test/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karak/diff-match-patch-line-and-word.git"
+  },
+  "keywords": [
+    "diff",
+    "diff-match-patch"
+  ],
+  "author": "Karak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/karak/diff-match-patch-line-and-word/issues"
+  },
+  "homepage": "https://github.com/karak/diff-match-patch-line-and-word#readme",
+  "devDependencies": {
+    "@types/diff-match-patch": "^1.0.32",
+    "@types/mocha": "^2.2.43",
+    "@types/power-assert": "^1.4.29",
+    "espower-typescript": "^8.1.1",
+    "mocha": "^4.0.1",
+    "power-assert": "^1.4.4",
+    "tslint": "^5.7.0",
+    "tslint-config-airbnb-base": "^0.1.0",
+    "typescript": "^2.5.3"
+  },
+  "peerDependencies": {
+    "diff-match-patch": "^1.0"
+  },
+  "dependencies": {}
+}

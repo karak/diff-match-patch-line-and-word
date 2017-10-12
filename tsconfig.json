@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["es5"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "sourceMap": false,
+    "declaration": true,
+    "outDir": "dist"
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "files": [
+    "./src/index.ts",
+    "./src/tokenize.ts"
+  ]
+}
