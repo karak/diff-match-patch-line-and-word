@@ -29,6 +29,7 @@
     "@types/diff-match-patch": "^1.0.32",
     "@types/mocha": "^2.2.43",
     "@types/power-assert": "^1.4.29",
+    "diff-match-patch": "^1.0.0",
     "espower-typescript": "^8.1.1",
     "mocha": "^4.0.1",
     "power-assert": "^1.4.4",
@@ -37,7 +38,7 @@
     "typescript": "^2.5.3"
   },
   "peerDependencies": {
-    "diff-match-patch": "^1.0"
+    "diff-match-patch": "^1.0.0"
   },
   "dependencies": {}
 }
