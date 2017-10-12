@@ -1,0 +1,19 @@
+# only for dev
+src/
+test/
+node_modules/
+tsconfig.json
+tslint.json
+
+# settings
+.vscode/
+.gitignore
+.npmignore
+yarn.lock
+.travis.yml
+
+# logs
+npm-debug.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
