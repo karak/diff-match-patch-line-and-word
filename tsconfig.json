@@ -10,7 +10,8 @@
     "strictNullChecks": true,
     "sourceMap": false,
     "declaration": true,
-    "outDir": "dist"
+    "outDir": "dist/",
+    "declarationDir": "./"
   },
   "exclude": [
     "node_modules"
