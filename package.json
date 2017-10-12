@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "mocha --compilers ts:espower-typescript/guess test/*-test.ts",
+    "test": "mocha --require espower-typescript/guess test/*-test.ts",
     "lint": "tslint src/*.ts test/*.ts"
   },
   "repository": {
