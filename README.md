@@ -1,3 +1,6 @@
+
+[![Build Status](https://travis-ci.org/karak/diff-match-patch-line-and-word.svg?branch=master)](https://travis-ci.org/karak/diff-match-patch-line-and-word)
+
 Diff Patch Merge Line and Word
 ====
 
