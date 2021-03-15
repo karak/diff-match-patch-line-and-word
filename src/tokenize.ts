@@ -1,5 +1,5 @@
 
-const WORD_BOUNDARY_PATTERN = /\W/;
+const WORD_BOUNDARY_PATTERN = /[^-'’\p{Letter}\p{Number}\p{Mark}]/u;
 
 function indexOfWordBoundary(target: string, startIndex: number): number {
   const n = target.length;

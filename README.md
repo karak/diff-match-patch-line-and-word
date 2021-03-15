@@ -1,17 +1,23 @@
 
 [![Build Status](https://travis-ci.org/karak/diff-match-patch-line-and-word.svg?branch=master)](https://travis-ci.org/karak/diff-match-patch-line-and-word)
 
-Diff Patch Merge Line and Word
+Diff Patch Merge Line and Unicode-Aware Word
 ====
 
 What's this
 ----
+An extension module that adds line-mode and word-mode diffs on 
+<tt>[google-diff-match-patch](https://github.com/google/diff-match-patch)</tt> 
+hosted as <tt>diff-patch-merge</tt> at NPM, originally by Neil Fraser, while respecting 
+Unicode character sets and some general liquistic behaviors (e.g., hyphens and
+apostrophes are parts of words, but underscores are not) when identifying word breaks.
+This is based on karak's <tt>[diff-match-patch-line-and-word](https://github.com/karak/diff-match-patch-line-and-word</tt>
 
-An extension module that adds line-mode and word-mode on <tt>[google-diff-match-patch](https://code.google.com/archive/p/google-diff-match-patch/)</tt>, 
-hosted as <tt>diff-patch-merge</tt> at NPM, originally by Neil Fraser.
-
-Implementation is from [Wiki](
-https://code.google.com/archive/p/google-diff-match-patch/wikis/LineOrWordDiffs.wiki).
+Support for languages using marks (vowel marks above/below/inside consonants), left-to-right
+scripts, accented letters and similar items have been tested.  **PLEASE NOTE:** _Lines containing
+mixed scripts may give unexpected results and are considered unsupported._ If you identify issues,
+please give complete examples indicating the two inputs, the incorrect results, the expected results
+and the name of the script used.
 
 TypeScript is also supported.
 
@@ -53,7 +59,7 @@ Just import after <tt>node-diff-patch-merge</tt>.
 
 ```javascript
 import { diff_match_patch } from 'diff-match-patch';
-import 'diff-match-patch-line-or-word'; // import globally to  enhanse the class.
+import 'diff-match-patch-line-and-unicode-aware-word'; // import globally to patch the class.
 
 const dmp = new diff_match_patch();
 const oldText = 'He writes the letter.';
