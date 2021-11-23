@@ -50,7 +50,7 @@ Just import after <tt>node-diff-patch-merge</tt>.
 
 ```javascript
 import { diff_match_patch } from 'diff-match-patch';
-import 'diff-match-patch-line-or-word'; // import globally to  enhanse the class.
+import 'diff-match-patch-line-and-word'; // import globally to  enhanse the class.
 
 const dmp = new diff_match_patch();
 const oldText = 'He writes the letter.';
