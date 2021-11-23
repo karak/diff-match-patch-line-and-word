@@ -1,6 +1,6 @@
 {
   "name": "diff-match-patch-line-and-word",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "An extension module that adds line-mode and word-mode on diff-match-patch.",
   "main": "dist/index.js",
   "directories": {
