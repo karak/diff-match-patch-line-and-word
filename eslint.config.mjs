@@ -35,9 +35,15 @@ export default [
         rules: {
             "camelcase": "off",
             "new-cap": "off",
+            "import/extensions": ["error", "ignorePackages", { "ts": "never" }]
+        },
+        settings: {
+            "import/resolver": {
+                typescript: {}
+            }
         }
     },
     {
-        ignores: ["node_modules/", "*.d.ts", "dist/"],
+        ignores: ["node_modules/", "*.d.ts", "dist/"]
     }
 ];

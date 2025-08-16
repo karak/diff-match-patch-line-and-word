@@ -15,9 +15,5 @@
   },
   "exclude": [
     "node_modules"
-  ],
-  "files": [
-    "./src/index.ts",
-    "./src/tokenize.ts"
   ]
 }
