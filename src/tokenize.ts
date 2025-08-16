@@ -1,4 +1,3 @@
-
 const WORD_BOUNDARY_PATTERN = /\W/;
 
 function indexOfWordBoundary(target: string, startIndex: number): number {
