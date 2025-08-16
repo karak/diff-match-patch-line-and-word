@@ -60,18 +60,17 @@ diff_match_patch.prototype.diff_wordsToChars_ = function (text1: string, text2: 
 
   wordArray[0] = '';
 
-  // tslint:disable-next-line:variable-name
   const diff_linesToWordsMunge_ = (text: string) => {
     let chars = '';
     let wordArrayLength = wordArray.length;
     tokenize(text, (word) => {
+      //eslint-disable-next-line no-prototype-builtins
       if (wordHash.hasOwnProperty ? wordHash.hasOwnProperty(word)
         : (wordHash[word] !== undefined)) {
         chars += String.fromCharCode(wordHash[word]);
       } else {
         chars += String.fromCharCode(wordArrayLength);
         wordHash[word] = wordArrayLength;
-        // tslint:disable-next-line:no-increment-decrement
         wordArray[wordArrayLength++] = word;
       }
     });
