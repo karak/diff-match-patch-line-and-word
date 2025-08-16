@@ -17,6 +17,7 @@ export default tseslint.config(
     {
         files: ["**/*.ts"],
         languageOptions: {
+            parser: tseslint.parser,
             parserOptions: {
                 project: true,
                 tsconfigRootDir: __dirname,
