@@ -30,8 +30,8 @@
     "@types/diff-match-patch": "^1.0.32",
     "@types/mocha": "^9.0.0",
     "@types/power-assert": "^1.5.8",
-    "@typescript-eslint/eslint-plugin": "^5.4.0",
-    "@typescript-eslint/parser": "^5.4.0",
+    "@typescript-eslint/eslint-plugin": "^8.39.1",
+    "@typescript-eslint/parser": "^8.39.1",
     "diff-match-patch": "^1.0.0",
     "eslint": "^8.3.0",
     "eslint-config-airbnb-base": "^15.0.0",
@@ -39,7 +39,7 @@
     "espower-typescript": "^10.0.0",
     "mocha": "^11.7.1",
     "power-assert": "^1.6.1",
-    "typescript": "^4.5.2"
+    "typescript": "^5.9.2"
   },
   "peerDependencies": {
     "diff-match-patch": "^1.0.0"
