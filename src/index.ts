@@ -65,8 +65,8 @@ diff_match_patch.prototype.diff_wordsToChars_ = function (text1: string, text2: 
     let chars = '';
     let wordArrayLength = wordArray.length;
     tokenize(text, (word) => {
-      if (wordHash.hasOwnProperty ? wordHash.hasOwnProperty(word) :
-        (wordHash[word] !== undefined)) {
+      if (wordHash.hasOwnProperty ? wordHash.hasOwnProperty(word)
+        : (wordHash[word] !== undefined)) {
         chars += String.fromCharCode(wordHash[word]);
       } else {
         chars += String.fromCharCode(wordArrayLength);

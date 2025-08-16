@@ -1,5 +1,4 @@
-import * as assert from 'power-assert';
-import tokenize from '../src/tokenize';
+import assertTokenize from './helpers/assertTokenize';
 
 describe('tokenize', () => {
   it('tokenizes by spaces and tabs.', () => {
@@ -9,7 +8,8 @@ describe('tokenize', () => {
   it('tokenizes by punctuations.', () => {
     assertTokenize(
       'aA,b.c!d?e;f:g"j\'h',
-      ['aA', ',' , 'b', '.', 'c', '!', 'd', '?', 'e', ';', 'f', ':', 'g', '"', 'j', '\'', 'h']);
+      ['aA', ',', 'b', '.', 'c', '!', 'd', '?', 'e', ';', 'f', ':', 'g', '"', 'j', '\'', 'h'],
+    );
   });
 
   it('separates adjacent punctuations.', () => {
@@ -27,12 +27,7 @@ describe('tokenize', () => {
   it('can tokenize "letter-after-period"', () => {
     assertTokenize(
       'I need to buy an apples.a',
-      ['I', ' ', 'need', ' ', 'to', ' ', 'buy', ' ', 'an', ' ', 'apples', '.', 'a']);
+      ['I', ' ', 'need', ' ', 'to', ' ', 'buy', ' ', 'an', ' ', 'apples', '.', 'a'],
+    );
   });
 });
-
-function assertTokenize(text: string, expected: string[]) {
-  const tokens: string[] = [];
-  tokenize(text, token => tokens.push(token));
-  assert.deepStrictEqual(expected, tokens);
-}
