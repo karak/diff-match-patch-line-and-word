@@ -1,4 +1,6 @@
-import { diff_match_patch, DIFF_DELETE, DIFF_EQUAL, DIFF_INSERT } from 'diff-match-patch';
+import {
+  diff_match_patch, DIFF_DELETE, DIFF_EQUAL, DIFF_INSERT,
+} from 'diff-match-patch';
 import * as assert from 'power-assert';
 import '../src/index';
 
