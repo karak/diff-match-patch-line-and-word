@@ -42,8 +42,7 @@
     "globals": "^16.3.0",
     "mocha": "^11.7.1",
     "power-assert": "^1.6.1",
-    "typescript": "^5.9.2",
-    "typescript-eslint": "^8.39.1"
+    "typescript": "^5.9.2"
   },
   "peerDependencies": {
     "diff-match-patch": "^1.0.0"

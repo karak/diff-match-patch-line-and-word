@@ -2,7 +2,8 @@ import { FlatCompat } from "@eslint/eslintrc";
 import path from "path";
 import { fileURLToPath } from "url";
 import globals from "globals";
-import tseslint from "typescript-eslint";
+import parser from "@typescript-eslint/parser";
+import tseslint from "@typescript-eslint/eslint-plugin";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -12,12 +13,15 @@ const compat = new FlatCompat({
     resolvePluginsRelativeTo: __dirname
 });
 
-export default tseslint.config(
+export default [
     ...compat.extends("airbnb-base"),
     {
         files: ["**/*.ts"],
+        plugins: {
+            "@typescript-eslint": tseslint,
+        },
         languageOptions: {
-            parser: tseslint.parser,
+            parser,
             parserOptions: {
                 project: true,
                 tsconfigRootDir: __dirname,
@@ -36,4 +40,4 @@ export default tseslint.config(
     {
         ignores: ["node_modules/", "*.d.ts", "dist/"],
     }
-);
+];
