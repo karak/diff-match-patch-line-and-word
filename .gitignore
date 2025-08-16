@@ -60,3 +60,4 @@ typings/
 # build results
 dist/*.js
 /*.d.ts
+.claude/settings.local.json
