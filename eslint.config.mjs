@@ -1,31 +1,14 @@
-import { FlatCompat } from "@eslint/eslintrc";
-import path from "path";
-import { fileURLToPath } from "url";
 import globals from "globals";
-import parser from "@typescript-eslint/parser";
-import tseslint from "@typescript-eslint/eslint-plugin";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const compat = new FlatCompat({
-    baseDirectory: __dirname,
-    resolvePluginsRelativeTo: __dirname
-});
+import pluginJs from "@eslint/js";
+import tseslint from "typescript-eslint";
 
 export default [
-    ...compat.extends("airbnb-base"),
+    pluginJs.configs.recommended,
+    ...tseslint.configs.recommended,
     {
         files: ["**/*.ts"],
-        plugins: {
-            "@typescript-eslint": tseslint,
-        },
         languageOptions: {
-            parser,
-            parserOptions: {
-                project: true,
-                tsconfigRootDir: __dirname,
-            },
+            parser: tseslint.parser,
             globals: {
                 ...globals.browser,
                 ...globals.es2021,
@@ -35,7 +18,6 @@ export default [
         rules: {
             "camelcase": "off",
             "new-cap": "off",
-            "import/extensions": ["error", "ignorePackages", { "ts": "never" }]
         },
         settings: {
             "import/resolver": {
