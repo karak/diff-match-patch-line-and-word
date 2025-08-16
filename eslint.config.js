@@ -28,7 +28,8 @@ export default tseslint.config(
             }
         },
         rules: {
-            // Add any specific rules here
+            "camelcase": "off",
+            "new-cap": "off",
         }
     },
     {
