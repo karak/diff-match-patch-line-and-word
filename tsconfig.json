@@ -11,13 +11,8 @@
     "sourceMap": false,
     "declaration": true,
     "outDir": "dist/",
-    "declarationDir": "./"
   },
   "exclude": [
     "node_modules"
-  ],
-  "files": [
-    "./src/index.ts",
-    "./src/tokenize.ts"
   ]
 }
