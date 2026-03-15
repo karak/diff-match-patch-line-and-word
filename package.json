@@ -9,7 +9,7 @@
   "scripts": {
     "build": "tsc",
     "test": "mocha --require espower-typescript/guess test/*-test.ts",
-    "lint": "eslint . --ext ts",
+    "lint": "eslint \"src/**/*.ts\" \"test/**/*.ts\"",
     "prepublish": "npm run build"
   },
   "repository": {
