@@ -28,7 +28,7 @@
   "homepage": "https://github.com/karak/diff-match-patch-line-and-word#readme",
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
-    "@types/diff-match-patch": "^1.0.32",
+    "@types/diff-match-patch": "1.0.32",
     "@types/mocha": "^9.0.0",
     "@types/power-assert": "^1.5.8",
     "@typescript-eslint/eslint-plugin": "^8.39.1",
@@ -39,12 +39,18 @@
     "eslint-plugin-import": "^2.32.0",
     "espower-typescript": "^10.0.0",
     "globals": "^16.3.0",
-    "mocha": "^11.7.1",
+    "mocha": "^11.3.0",
     "power-assert": "^1.6.1",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.39.1"
   },
   "peerDependencies": {
     "diff-match-patch": "^1.0.0"
+  },
+  "overrides": {
+    "serialize-javascript": "^7.0.4",
+    "mocha": {
+      "diff": "^8.0.3"
+    }
   }
 }
