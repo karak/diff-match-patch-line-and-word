@@ -40,7 +40,7 @@ diff-match-patch-line-and-word/
 │   ├── index-test.ts     # Tests for diff_lineMode and diff_wordMode
 │   └── tokenize-test.ts  # Tests for word tokenization edge cases
 ├── dist/                 # Compiled JavaScript output (generated)
-├── eslint.config.js      # ESLint flat config with Airbnb base + TypeScript
+├── eslint.config.mjs     # ESLint flat config with airbnb-extended + TypeScript
 ├── tsconfig.json         # TypeScript configuration
 └── package.json          # Package manifest
 ```
@@ -91,10 +91,10 @@ Both line and word modes follow the same pattern:
 - **Output:** `dist/` for JS, root for `.d.ts` declarations
 - **Explicit file list:** Only `src/index.ts` and `src/tokenize.ts` are compiled
 
-### ESLint (eslint.config.js)
-- Uses ESLint 9 flat config format
-- Extends Airbnb base configuration via `@eslint/eslintrc` FlatCompat
-- TypeScript-aware with `typescript-eslint`
+### ESLint (eslint.config.mjs)
+- Uses ESLint 9 flat config format (native, no `@eslint/eslintrc`/FlatCompat)
+- Extends the Airbnb style guide via `eslint-config-airbnb-extended`, the flat-config successor to `eslint-config-airbnb-base`
+- TypeScript-aware; type info comes from `tsconfig.eslint.json` (a lint-only project that also includes `test/`)
 - Ignores: `node_modules/`, `*.d.ts`, `dist/`
 
 ### Testing

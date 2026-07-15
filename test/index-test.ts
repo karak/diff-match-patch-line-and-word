@@ -1,4 +1,6 @@
-import { diff_match_patch, DIFF_DELETE, DIFF_EQUAL, DIFF_INSERT } from 'diff-match-patch';
+import {
+  diff_match_patch, DIFF_DELETE, DIFF_EQUAL, DIFF_INSERT,
+} from 'diff-match-patch';
 import * as assert from 'power-assert';
 import '../src/index';
 
@@ -62,7 +64,10 @@ describe('diff-match-match', () => {
     });
 
     it('output 1 equal line in 3 lines.', () => {
-      const spans = diff.diff_lineMode('I run.\nI\'m tired.\nAnd I love you.', 'I sit.\nI\'m tired.\nAnd I don\'t love you.');
+      const spans = diff.diff_lineMode(
+        'I run.\nI\'m tired.\nAnd I love you.',
+        'I sit.\nI\'m tired.\nAnd I don\'t love you.',
+      );
       assert.deepStrictEqual(spans, [[
         DIFF_DELETE,
         'I run.\n',
