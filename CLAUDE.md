@@ -107,7 +107,7 @@ Both line and word modes follow the same pattern:
 GitHub Actions workflow (`.github/workflows/main.yml`):
 - Triggers on push/PR to `master` branch
 - Runs on `ubuntu-latest` with Node.js 18
-- Steps: `npm ci` → `npm run build` → `npm test`
+- Steps: `npm ci` → `npm run build` → `npm run lint` → `npm test`
 
 ## Key Conventions
 
